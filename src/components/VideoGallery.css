@@ -25,6 +25,20 @@
   transform: translateY(-5px);
 }
 
+.highlighted-video {
+  grid-column: 1 / -1;
+}
+
+.highlighted-video .portfolio-video-container {
+  max-height: 700px;
+}
+
+@media (min-width: 768px) {
+  .highlighted-video .portfolio-video-container {
+    height: 700px;
+  }
+}
+
 .portfolio-video-container {
   width: 100%;
   aspect-ratio: 9/16;

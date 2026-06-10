@@ -5,6 +5,18 @@
   align-items: center;
 }
 
+.about-logo-container {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.about-logo {
+  max-width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
 @media (min-width: 768px) {
   .about-content {
     grid-template-columns: 1fr 1fr;

@@ -24,6 +24,12 @@ const About = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
+            <div className="about-logo-container">
+              <img src="/logo.png" alt="Ishan Editor & Developer Logo" className="about-logo" />
+            </div>
+            <p className="lead">
+              I am a digital product creator who bridges the gap between design and engineering.
+            </p>
             <p>
               I am a Digital Product Creator based in India, specializing in building exceptional digital experiences. By leveraging the power of modern web technologies and AI, I turn ideas into fully functional, beautiful, and market-ready products.
             </p>

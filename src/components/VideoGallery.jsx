@@ -17,12 +17,38 @@ const VideoGallery = () => {
         </motion.h2>
         
         <div className="video-grid">
+          {/* Highlighted Video */}
+          <motion.div 
+            className="video-card highlighted-video"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="portfolio-video-container">
+              <iframe 
+                src="https://www.instagram.com/reel/DZajsOIpKYc/embed/" 
+                width="100%" 
+                height="100%" 
+                frameBorder="0" 
+                scrolling="no" 
+                allowTransparency="true"
+                allow="encrypted-media"
+                className="instagram-embed"
+              ></iframe>
+            </div>
+            <div className="video-info">
+              <h3 className="video-title">Featured Masterpiece</h3>
+              <p className="video-description">A premier example of my editing capabilities, combining advanced visual effects with perfect pacing.</p>
+            </div>
+          </motion.div>
+
           <motion.div 
             className="video-card"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
           >
             <div className="portfolio-video-container">
               <iframe 
