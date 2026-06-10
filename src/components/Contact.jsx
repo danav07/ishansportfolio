@@ -63,19 +63,24 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            onSubmit={(e) => e.preventDefault()}
+            action="https://formsubmit.co/ishanverma7413@gmail.com" 
+            method="POST"
           >
+            {/* FormSubmit Configuration */}
+            <input type="hidden" name="_subject" value="New message from your Portfolio!" />
+            <input type="hidden" name="_captcha" value="false" />
+            
             <div className="form-group">
               <label htmlFor="name">Name</label>
-              <input type="text" id="name" placeholder="Your Name" required />
+              <input type="text" id="name" name="name" placeholder="Your Name" required />
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" placeholder="your@email.com" required />
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
             </div>
             <div className="form-group">
               <label htmlFor="message">Message</label>
-              <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
             </div>
             <button type="submit" className="btn btn-primary submit-btn">
               Send Message <Send size={18} />
