@@ -44,6 +44,24 @@ const About = () => {
               <span className="skill-tag">Video Editing</span>
               <span className="skill-tag">Marketing Strategy</span>
             </div>
+
+            <div className="tools-section">
+              <h4 className="tools-title">My Creative Toolkit</h4>
+              <div className="tools-grid">
+                <div className="tool-item">
+                  <img src="/premiere.svg" alt="Premiere Pro Logo" className="tool-icon" />
+                  <span>Premiere Pro</span>
+                </div>
+                <div className="tool-item">
+                  <img src="/aftereffects.svg" alt="After Effects Logo" className="tool-icon" />
+                  <span>After Effects</span>
+                </div>
+                <div className="tool-item capcut-item">
+                  <img src="/capcut.svg" alt="CapCut Logo" className="tool-icon capcut-icon" />
+                  <span>CapCut</span>
+                </div>
+              </div>
+            </div>
           </motion.div>
           
         </div>
