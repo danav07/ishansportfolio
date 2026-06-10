@@ -1,0 +1,275 @@
+.demo-shop-wrapper {
+  min-height: 100vh;
+  background-color: #fafafa;
+  color: #111111;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.demo-banner-shop {
+  background-color: #111111;
+  color: white;
+  padding: 0.75rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  z-index: 100;
+}
+
+.back-btn-shop {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.back-btn-shop:hover {
+  opacity: 1;
+}
+
+.demo-badge-shop {
+  background: rgba(255,255,255,0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+/* Shop Nav */
+.shop-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background-color: white;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.shop-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.shop-menu-btn {
+  background: none;
+  border: none;
+  display: none;
+  cursor: pointer;
+}
+
+.shop-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+.shop-nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.shop-nav-links a {
+  color: #666;
+  text-decoration: none;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.shop-nav-links a:hover {
+  color: #111;
+}
+
+.shop-nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #111;
+  color: white;
+  font-size: 0.65rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Shop Main */
+.shop-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+}
+
+.product-image-wrapper {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.main-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  display: block;
+}
+
+.product-thumbnails {
+  display: flex;
+  gap: 1rem;
+}
+
+.thumb {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.thumb.active {
+  border: 2px solid #111;
+}
+
+/* Product Info */
+.breadcrumbs {
+  font-size: 0.875rem;
+  color: #888;
+  margin-bottom: 2rem;
+}
+
+.breadcrumbs span {
+  cursor: pointer;
+}
+
+.breadcrumbs span:last-child {
+  color: #111;
+}
+
+.product-title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.product-desc {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+}
+
+.product-variants h3 {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.color-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.color-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.color-btn.active {
+  border: 2px solid #111;
+  padding: 2px;
+  background-clip: content-box;
+}
+
+.add-to-cart-btn {
+  width: 100%;
+  padding: 1.25rem;
+  background-color: #111;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-bottom: 3rem;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #333;
+}
+
+.product-details-accordion {
+  border-top: 1px solid #eaeaea;
+}
+
+.accordion-item {
+  padding: 1.5rem 0;
+}
+
+.accordion-item.border-top {
+  border-top: 1px solid #eaeaea;
+}
+
+.accordion-item h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.accordion-item p {
+  color: #666;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    grid-template-columns: 1fr;
+  }
+  .shop-nav-links {
+    display: none;
+  }
+  .shop-menu-btn {
+    display: block;
+  }
+}

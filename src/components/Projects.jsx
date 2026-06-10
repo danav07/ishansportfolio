@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Code2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import project1 from '../assets/project1.png';
 import project2 from '../assets/project2.png';
 import project3 from '../assets/project3.png';
@@ -9,27 +10,33 @@ import './Projects.css';
 const projects = [
   {
     id: 1,
-    title: 'Aura E-Commerce',
+    title: 'Lumina E-Commerce',
     category: 'Full Stack App',
-    description: 'A premium, modern e-commerce platform with dark mode, seamless cart interactions, and a beautiful UI.',
+    description: 'A sleek, premium e-commerce platform designed for luxury brands. Features a responsive grid, smooth animations, and a minimalist aesthetic.',
     image: project1,
-    tags: ['React', 'CSS', 'Node.js'],
+    tags: ['React', 'CSS', 'UI/UX', 'Framer Motion'],
+    demoUrl: '/demo/ecommerce',
+    githubUrl: 'https://github.com/danav07/ishansportfolio'
   },
   {
     id: 2,
-    title: 'Nexus Analytics',
+    title: 'Nexus AI Dashboard',
     category: 'AI Dashboard',
-    description: 'An AI-powered data visualization dashboard with glassmorphic elements and real-time insights.',
+    description: 'A dark-mode analytics dashboard powered by AI. Includes interactive chat UI, glassmorphism elements, and professional typography.',
     image: project2,
-    tags: ['React', 'Framer Motion', 'Chart.js'],
+    tags: ['React', 'Dashboard', 'UI Design'],
+    demoUrl: '/demo/ai-dashboard',
+    githubUrl: 'https://github.com/danav07/ishansportfolio'
   },
   {
     id: 3,
-    title: 'Studio Creative',
+    title: 'Marketing Website',
     category: 'Marketing Website',
-    description: 'A high-converting landing page for a creative agency, featuring bold typography and dynamic scroll animations.',
+    description: 'A high-conversion landing page for a SaaS startup. Features clear call-to-actions, social proof sections, and fast loading speeds.',
     image: project3,
-    tags: ['React', 'Vite', 'Vanilla CSS'],
+    tags: ['React', 'HTML5', 'CSS3'],
+    demoUrl: '#',
+    githubUrl: 'https://github.com/danav07/ishansportfolio'
   }
 ];
 
@@ -61,12 +68,18 @@ const Projects = () => {
                 <img src={project.image} alt={project.title} className="project-image" />
                 <div className="project-overlay">
                   <div className="project-links">
-                    <button className="icon-btn" aria-label="View Source">
-                      <Code2 size={20} />
-                    </button>
-                    <button className="icon-btn" aria-label="View Live">
-                      <ExternalLink size={20} />
-                    </button>
+                    {project.demoUrl.startsWith('/') && project.demoUrl !== '#' ? (
+                      <Link to={project.demoUrl} className="project-btn demo-btn">
+                        <ExternalLink size={18} /> View Live Demo
+                      </Link>
+                    ) : (
+                      <a href={project.demoUrl} className="project-btn demo-btn">
+                        <ExternalLink size={18} /> View Demo
+                      </a>
+                    )}
+                    <a href={project.githubUrl} className="project-btn github-btn">
+                      <Code2 size={18} /> Code
+                    </a>
                   </div>
                 </div>
               </div>
