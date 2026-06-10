@@ -24,14 +24,18 @@ const VideoGallery = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
-            <video 
-              controls 
-              className="portfolio-video"
-              preload="metadata"
-            >
-              <source src="/0604.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <div className="portfolio-video-container">
+              <iframe 
+                src="https://www.instagram.com/reel/DZKLvGbtC2I/embed/" 
+                width="100%" 
+                height="100%" 
+                frameBorder="0" 
+                scrolling="no" 
+                allowTransparency="true"
+                allow="encrypted-media"
+                className="instagram-embed"
+              ></iframe>
+            </div>
             <div className="video-info">
               <h3 className="video-title">Recent Edit Showcase</h3>
               <p className="video-description">Professional video editing showcase featuring precise cuts, dynamic transitions, and polished color grading.</p>
