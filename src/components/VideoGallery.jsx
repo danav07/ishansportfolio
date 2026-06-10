@@ -41,6 +41,31 @@ const VideoGallery = () => {
               <p className="video-description">Professional video editing showcase featuring precise cuts, dynamic transitions, and polished color grading.</p>
             </div>
           </motion.div>
+
+          <motion.div 
+            className="video-card"
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <div className="portfolio-video-container">
+              <iframe 
+                src="https://www.instagram.com/p/DZaf8sEtEgM/embed/" 
+                width="100%" 
+                height="100%" 
+                frameBorder="0" 
+                scrolling="no" 
+                allowTransparency="true"
+                allow="encrypted-media"
+                className="instagram-embed"
+              ></iframe>
+            </div>
+            <div className="video-info">
+              <h3 className="video-title">Creative Edit</h3>
+              <p className="video-description">Engaging social media content crafted to capture attention and drive viewer engagement.</p>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
