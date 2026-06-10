@@ -46,17 +46,6 @@ const About = () => {
             </div>
           </motion.div>
           
-          <motion.div 
-            className="about-image-container"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          >
-            <div className="about-image-placeholder">
-              <span>IV</span>
-            </div>
-          </motion.div>
         </div>
       </div>
     </section>
