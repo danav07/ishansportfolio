@@ -4,82 +4,127 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ishan Verma - Resume</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
+  :root {
+    --text-main: #111827;
+    --text-muted: #4b5563;
+    --border-color: #e5e7eb;
+  }
+  
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: #333;
-    line-height: 1.6;
-    max-width: 800px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--text-main);
+    line-height: 1.5;
+    max-width: 850px;
     margin: 0 auto;
-    padding: 40px;
-    background: #fff;
+    padding: 60px 40px;
+    background: #ffffff;
+    font-size: 14px;
   }
+
   h1 {
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-    color: #111;
-  }
-  .subtitle {
-    font-size: 1.2rem;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  .contact-info {
-    font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #eaeaea;
-    padding-bottom: 20px;
-  }
-  .contact-info a {
-    color: #0066cc;
-    text-decoration: none;
-  }
-  h2 {
-    font-size: 1.3rem;
-    color: #222;
-    border-bottom: 1px solid #eaeaea;
-    padding-bottom: 5px;
-    margin-top: 30px;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    letter-spacing: -0.02em;
     text-transform: uppercase;
-    letter-spacing: 1px;
   }
-  h3 {
+
+  .subtitle {
     font-size: 1.1rem;
-    margin-bottom: 5px;
-    color: #111;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 16px;
   }
+
+  .contact-info {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .contact-info a {
+    color: var(--text-main);
+    text-decoration: none;
+    border-bottom: 1px solid var(--text-main);
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-main);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--text-main);
+    padding-bottom: 6px;
+    margin: 32px 0 16px 0;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
   .project-meta {
     font-size: 0.9rem;
-    font-style: italic;
-    color: #666;
-    margin-bottom: 10px;
+    color: var(--text-muted);
+    font-weight: 500;
+    margin-bottom: 12px;
   }
+
+  p {
+    margin: 0 0 12px 0;
+    color: var(--text-muted);
+    text-align: justify;
+  }
+
   ul {
-    margin-top: 5px;
+    margin: 0 0 20px 0;
     padding-left: 20px;
   }
+
   li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
+    color: var(--text-muted);
   }
-  .bold {
-    font-weight: bold;
+
+  li strong, .bold {
+    color: var(--text-main);
+    font-weight: 600;
   }
+
   .print-btn {
-    display: inline-block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
     padding: 10px 20px;
-    background-color: #000;
+    background-color: var(--text-main);
     color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
     cursor: pointer;
     border: none;
-    font-size: 1rem;
+    transition: opacity 0.2s;
+    font-family: inherit;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
+
   .print-btn:hover {
-    background-color: #333;
+    opacity: 0.9;
   }
+
   @media print {
     body {
       padding: 0;
@@ -88,70 +133,85 @@
     .print-btn {
       display: none;
     }
+    a {
+      border-bottom: none;
+    }
   }
 </style>
 </head>
 <body>
 
-  <button class="print-btn" onclick="window.print()">🖨️ Save as PDF</button>
+  <button class="print-btn" onclick="window.print()">Export to PDF</button>
 
-  <h1>ISHAN VERMA</h1>
-  <div class="subtitle">Digital Product Creator | Editor & Developer</div>
-  
-  <div class="contact-info">
-    📍 India &nbsp;|&nbsp; 
-    📧 <a href="mailto:ishanverma7413@gmail.com">ishanverma7413@gmail.com</a> &nbsp;|&nbsp; 
-    📞 +91 9805917845 &nbsp;|&nbsp; 
-    🌐 <a href="https://ishansportfolio-projects.vercel.app">Portfolio</a>
-  </div>
+  <header>
+    <h1>Ishan Verma</h1>
+    <div class="subtitle">Digital Product Creator | Support Specialist & Front-End Engineer</div>
+    
+    <div class="contact-info">
+      <span>Worldwide Remote (Available across all time zones)</span> &bull; 
+      <span>Base: India (IST)</span> &bull; 
+      <a href="mailto:ishanverma7413@gmail.com">ishanverma7413@gmail.com</a> &bull; 
+      <span>+91 9805917845</span> &bull; 
+      <a href="https://ishansportfolio-projects.vercel.app">Portfolio Website</a>
+    </div>
+  </header>
 
-  <h2>Professional Summary</h2>
-  <p>Dynamic and creative Digital Product Creator who bridges the gap between design and engineering. Specializing in building exceptional digital experiences by leveraging the power of modern web technologies and AI. Proven expertise in transforming ideas into fully functional, visually stunning, and market-ready products. Highly proficient in both front-end software development and professional video editing, offering a rare blend of technical problem-solving and high-retention visual storytelling.</p>
+  <section>
+    <h2>Professional Summary</h2>
+    <p>Highly adaptable Digital Product Creator bridging the gap between technical engineering, creative media, and client support. Proven ability to architect modern web applications through AI-assisted rapid prototyping ("vibe coding") and front-end frameworks. Strong background in technical support services, ensuring seamless client communication and swift issue resolution. Highly autonomous and self-directed, uniquely positioned to drive remote product teams from ideation to client delivery. Deeply committed to employer loyalty, treating every project with unwavering dedication and a strong sense of ownership.</p>
+  </section>
 
-  <h2>Core Competencies & Skills</h2>
-  <ul>
-    <li><span class="bold">Video & Photo Editing:</span> High-retention social media content, narrative pacing, dynamic transitions, precise cuts, color grading, visual effects (VFX).</li>
-    <li><span class="bold">Creative Software:</span> Adobe Premiere Pro, Adobe After Effects, CapCut.</li>
-    <li><span class="bold">Web Development:</span> React.js, CSS3, HTML5, Framer Motion, AI-Assisted Development.</li>
-    <li><span class="bold">Design & Strategy:</span> UI/UX Design, Glassmorphism & Minimalist Aesthetics, Marketing Strategy, Conversion Rate Optimization.</li>
-  </ul>
+  <section>
+    <h2>Core Competencies & Technical Skills</h2>
+    <ul>
+      <li><strong>AI-Assisted Engineering:</strong> Rapid prototyping, prompt engineering, LLM workflow integration, autonomous problem-solving.</li>
+      <li><strong>Front-End Development:</strong> React.js, JavaScript (ES6+), HTML5, CSS3, Framer Motion, Responsive UI Architecture.</li>
+      <li><strong>Support & Operations:</strong> Technical troubleshooting, client relationship management, empathy-driven user support, asynchronous communication.</li>
+      <li><strong>Multimedia Production:</strong> Adobe Premiere Pro, After Effects, CapCut, VFX, high-retention video editing, color grading.</li>
+      <li><strong>AI & Productivity Suite:</strong> Claude Pro, Gemini Advanced, Microsoft 365 (Word, Excel, PowerPoint, Teams).</li>
+    </ul>
+  </section>
 
-  <h2>Technical Projects & Development Experience</h2>
-  
-  <h3>Lumina E-Commerce Platform</h3>
-  <div class="project-meta">Full Stack UI Project — React, CSS, Framer Motion, UI/UX Design</div>
-  <ul>
-    <li>Designed and developed a premium, sleek e-commerce platform tailored for luxury brands.</li>
-    <li>Implemented a responsive grid system and integrated smooth, momentum-based scrolling (Lenis) and Framer Motion blur-reveal animations.</li>
-  </ul>
+  <section>
+    <h2>Professional Experience & Projects</h2>
+    
+    <h3>Technical Support & Client Services <span>2023 &ndash; Present</span></h3>
+    <div class="project-meta">Remote Operations & User Success</div>
+    <ul>
+      <li>Provide direct technical support and guidance to clients, resolving complex inquiries with high empathy and clear communication.</li>
+      <li>Diagnose and troubleshoot technical issues, reducing resolution times through efficient asynchronous communication and documentation.</li>
+      <li>Act as the bridge between technical execution and end-user satisfaction, ensuring high retention and trust.</li>
+    </ul>
 
-  <h3>Nexus AI Dashboard</h3>
-  <div class="project-meta">Analytics UI Project — React, Component-based Architecture, Dashboard UI Design</div>
-  <ul>
-    <li>Engineered a dark-mode analytics dashboard powered by AI concepts.</li>
-    <li>Built an interactive chat UI utilizing modern glassmorphism elements and professional typography to enhance user experience.</li>
-  </ul>
+    <h3>Lumina E-Commerce Platform <span>2024</span></h3>
+    <div class="project-meta">Front-End Engineering | React.js, CSS3, Framer Motion</div>
+    <ul>
+      <li>Engineered a highly performant, responsive e-commerce web application utilizing AI-assisted development workflows to rapidly prototype complex UI components.</li>
+      <li>Implemented advanced smooth momentum-scrolling (Lenis) and interactive glassmorphism components to create a premium, high-converting user experience.</li>
+    </ul>
 
-  <h3>High-Conversion Marketing Website</h3>
-  <div class="project-meta">Landing Page Project — React, HTML5, CSS3, Responsive Design</div>
-  <ul>
-    <li>Developed a high-conversion landing page optimized for a SaaS startup.</li>
-    <li>Focused on performance optimization, fast loading speeds, strategic call-to-actions, and social proof integration to drive user acquisition.</li>
-  </ul>
+    <h3>Nexus AI Analytics Dashboard <span>2024</span></h3>
+    <div class="project-meta">UI Architecture | React.js, Component Design</div>
+    <ul>
+      <li>Architected a modular analytics dashboard utilizing modern dark-mode aesthetics, improving data visualization clarity for end users.</li>
+      <li>Developed a responsive layout system optimizing screen real estate for deep-data interaction across desktop and mobile devices.</li>
+    </ul>
 
-  <h2>Video Editing & Multimedia Portfolio</h2>
-  <p><em>View full interactive video gallery at: <a href="https://ishansportfolio-projects.vercel.app/#videos">ishansportfolio-projects.vercel.app/#videos</a></em></p>
-  <ul>
-    <li><span class="bold">Featured Masterpiece:</span> Executed a premier editing showcase combining advanced visual effects with perfect audio-visual pacing to maximize viewer retention.</li>
-    <li><span class="bold">Professional Edits & Transitions:</span> Delivered polished, professional video content highlighting precise cuts, dynamic transitions, and cinematic color grading.</li>
-    <li><span class="bold">Social Media Content Creation:</span> Crafted highly engaging, fast-paced short-form content specifically tailored to capture attention and drive engagement across algorithmic social platforms (Instagram Reels/TikTok).</li>
-  </ul>
+    <h3>High-Retention Multimedia & Video Production <span>2022 &ndash; Present</span></h3>
+    <div class="project-meta">Creative Direction | Premiere Pro, After Effects</div>
+    <ul>
+      <li>Direct, edit, and produce fast-paced, high-retention multimedia content optimized for algorithmic discovery on major social platforms (Instagram/TikTok).</li>
+      <li>Execute precise narrative pacing, dynamic transitions, and cinematic color grading to maximize audience engagement and retention metrics.</li>
+    </ul>
+  </section>
 
-  <h2>Education & Continuous Learning</h2>
-  <ul>
-    <li><span class="bold">Self-Taught & AI-Assisted Developer:</span> Continuously upskilling in modern React frameworks, advanced CSS animations, and cutting-edge web design trends.</li>
-    <li><span class="bold">Advanced Video Production:</span> Mastery of industry-standard editing suites (Premiere Pro, After Effects) through continuous hands-on project execution.</li>
-  </ul>
+  <section>
+    <h2>Education & Continuous Learning</h2>
+    <ul>
+      <li><strong>Self-Directed Technical Education:</strong> Continuous upskilling in modern front-end frameworks, AI-assisted development tools, and user experience methodologies.</li>
+      <li><strong>Creative Software Mastery:</strong> Advanced proficiency in industry-standard editing suites through continuous hands-on project execution.</li>
+    </ul>
+  </section>
 
 </body>
 </html>

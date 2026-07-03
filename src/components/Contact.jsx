@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Globe } from 'lucide-react';
 import './Contact.css';
 
 const Contact = () => {
@@ -53,6 +53,16 @@ const Contact = () => {
               <div>
                 <h4>Location</h4>
                 <p>India</p>
+              </div>
+            </div>
+
+            <div className="info-item">
+              <div className="info-icon">
+                <Globe size={24} />
+              </div>
+              <div>
+                <h4>Timezone</h4>
+                <p>IST (Flexible across all time zones globally)</p>
               </div>
             </div>
           </motion.div>

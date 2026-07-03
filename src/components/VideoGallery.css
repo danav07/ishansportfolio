@@ -1,28 +1,23 @@
 .video-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 3rem;
+  gap: 2.5rem;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 .video-card {
-  background-color: var(--bg-color);
+  background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-@media (prefers-color-scheme: dark) {
-  .video-card {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  }
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .video-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(124, 58, 237, 0.15);
+  border-color: rgba(124, 58, 237, 0.3);
 }
 
 .highlighted-video {
@@ -43,7 +38,7 @@
   width: 100%;
   aspect-ratio: 9/16;
   max-height: 550px;
-  background-color: var(--border-color);
+  background-color: var(--bg-color);
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -71,9 +66,11 @@
   font-family: var(--font-heading);
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+  color: var(--text-color);
 }
 
 .video-description {
   color: var(--text-muted);
   font-size: 1rem;
+  line-height: 1.6;
 }
